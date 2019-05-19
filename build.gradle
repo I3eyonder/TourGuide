@@ -9,6 +9,8 @@ buildscript {
         targetSdkVersionNum = 28
         buildToolVersionNum = '28.0.3'
         gradlePluginVersion = '3.4.1'
+        version_name = '1.0.0'
+        version_code = 1
     }
     dependencies {
         repositories {
@@ -16,6 +18,8 @@ buildscript {
         }
         classpath "com.android.tools.build:gradle:$gradlePluginVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
 
     }
     repositories {

@@ -2,36 +2,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-repositories {
-    mavenCentral()
-    maven() {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-    }
-}
-
-Properties getGradleProperties() {
-    def gradlePropsFile = file('../gradle.properties')
-    Properties gradleProps = new Properties()
-    if (gradlePropsFile.canRead()) {
-        gradleProps.load(new FileInputStream(gradlePropsFile))
-        println gradleProps['VERSION_CODE']
-        println gradleProps['VERSION_NAME']
-    } else {
-        throw new GradleException("Could not read gradle.properties!")
-    }
-    gradleProps
-}
-
 android {
     compileSdkVersion compileSdkVersionNum
     buildToolsVersion buildToolVersionNum
-    def gradleProps = getGradleProperties()
     defaultConfig {
         applicationId "hieupt.tourguide.demo"
         minSdkVersion minSdkVersionNum
         targetSdkVersion targetSdkVersionNum
-        versionCode gradleProps['VERSION_CODE'].toInteger()
-        versionName gradleProps['VERSION_NAME']
+        versionCode version_code
+        versionName version_name
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -47,15 +26,6 @@ android {
     packagingOptions {
         exclude 'LICENSE.txt'
     }
-}
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-artifacts {
-    archives sourcesJar
 }
 
 dependencies {
@@ -75,12 +45,3 @@ dependencies {
 
 
 }
-
-task print_git_tag_command {
-    doLast {
-        def gradleProps = getGradleProperties()
-        println "git tag -a v" + gradleProps['VERSION_NAME'] + " -m \"VERSION_CODE=" + gradleProps['VERSION_CODE'] + ", VERSION_NAME=" + gradleProps['VERSION_NAME'] + "\""
-        println "git push --tags"
-    }
-}
-

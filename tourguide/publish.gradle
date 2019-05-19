@@ -1,0 +1,22 @@
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+group = 'com.dev.hieupt'
+version = version_name
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    configurations = ['archives']
+    pkg {
+        repo = 'TourGuide'
+        name = 'tourguide'
+        desc = 'TourGuide'
+        licenses = ['MIT']
+        vcsUrl = 'https://github.com/hieupham1993/TourGuide.git'
+        version {
+            name = version_name
+            released = new Date()
+        }
+    }
+}
