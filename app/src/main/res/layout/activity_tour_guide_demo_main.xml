@@ -6,4 +6,4 @@
     android:layout_height="match_parent"
     android:divider="@null"
     app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-    tools:context="tourguide.tourguidedemo.main.MainActivity" />
+    tools:context="hieupt.tourguidedemo.main.MainActivity" />

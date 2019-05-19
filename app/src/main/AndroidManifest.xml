@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="tourguide.tourguidedemo">
+    package="hieupt.tourguidedemo">
 
     <application
-        android:name=".MyApplication"
+        android:name="hieupt.tourguidedemo.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/tour_guide_icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ToolbarActivity"
+            android:name="hieupt.tourguidedemo.ToolbarActivity"
             android:label="Toolbar Activity"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".BasicActivity"
+            android:name="hieupt.tourguidedemo.BasicActivity"
             android:label="Basic Activity" />
         <activity
-            android:name=".ToolTipGravityActivity"
+            android:name="hieupt.tourguidedemo.ToolTipGravityActivity"
             android:label="Tooltip Gravity Activity" />
         <activity
-            android:name=".ToolTipCustomizationActivity"
+            android:name="hieupt.tourguidedemo.ToolTipCustomizationActivity"
             android:label="ToolTip Customization Activity" />
         <activity
-            android:name=".OverlayCustomizationActivity"
+            android:name="hieupt.tourguidedemo.OverlayCustomizationActivity"
             android:label="Overlay Customization Activity" />
         <activity
-            android:name=".MultipleToolTipActivity"
+            android:name="hieupt.tourguidedemo.MultipleToolTipActivity"
             android:label="Multiple Tooltip Activity" />
         <activity
-            android:name=".NoPointerActivity"
+            android:name="hieupt.tourguidedemo.NoPointerActivity"
             android:label="NoPointer Activity" />
         <activity
-            android:name=".NoPointerNoToolTipActivity"
+            android:name="hieupt.tourguidedemo.NoPointerNoToolTipActivity"
             android:label="Overlay Only Activity" />
         <activity
-            android:name=".NoOverlayActivity"
+            android:name="hieupt.tourguidedemo.NoOverlayActivity"
             android:label="No Overlay Activity" />
         <activity
-            android:name=".ManualSequenceActivity"
+            android:name="hieupt.tourguidedemo.ManualSequenceActivity"
             android:label="Manual Sequence Activity" />
         <activity
             android:name=".OverlaySequenceTourActivity"
             android:label="Overlay Activity (using Sequence Class)" />
         <activity
-            android:name=".NavDrawerActivity"
+            android:name="hieupt.tourguidedemo.NavDrawerActivity"
             android:label="Navigational Drawer Activity"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".MemoryLeakTestActivity"
+            android:name="hieupt.tourguidedemo.MemoryLeakTestActivity"
             android:label="Memory Leak Test Activity" />
         <activity
-            android:name=".RoundedRectangleOverlayActivity"
+            android:name="hieupt.tourguidedemo.RoundedRectangleOverlayActivity"
             android:label="Rounded Rectangle Activity" />
         <activity
-            android:name=".AdjustPaddingOverlayActivity"
+            android:name="hieupt.tourguidedemo.AdjustPaddingOverlayActivity"
             android:label="Adjust Overlay Padding Activity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".RecyclerViewActivity"
+            android:name="hieupt.tourguidedemo.RecyclerViewActivity"
             android:label="RecyclerView Activity" />
         <activity
-            android:name=".main.MainActivity"
+            android:name="hieupt.tourguidedemo.main.MainActivity"
             android:label="Tour Guide Demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -72,7 +72,7 @@
 
         <!-- Test Activity -->
         <activity
-            android:name="tourguide.instrumentation.test.ToolTipMeasureTestActivity"
+            android:name="hieupt.instrumentation.test.ToolTipMeasureTestActivity"
             android:exported="true"
             android:label="ToolTip Measure Test Activity" />
 

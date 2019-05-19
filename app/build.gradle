@@ -27,7 +27,7 @@ android {
     buildToolsVersion buildToolVersionNum
     def gradleProps = getGradleProperties()
     defaultConfig {
-        applicationId "tourguide.tourguide"
+        applicationId "hieupt.tourguide.demo"
         minSdkVersion minSdkVersionNum
         targetSdkVersion targetSdkVersionNum
         versionCode gradleProps['VERSION_CODE'].toInteger()
