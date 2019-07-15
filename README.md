@@ -8,6 +8,11 @@ Refer to this :point_down:
 
 http://worker8.github.io/TourGuide/
 
+# Dependency
+```
+implementation 'com.dev.hieupt:tourguide:1.0.0'
+```
+
 # License
 <details>
     <summary>
