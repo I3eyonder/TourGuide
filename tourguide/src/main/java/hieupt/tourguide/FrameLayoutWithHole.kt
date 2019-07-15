@@ -46,7 +46,11 @@ open class FrameLayoutWithHole @JvmOverloads constructor(
             val (view, config) = it
             when (val shape = config.shape) {
                 is Config.Shape.Circle -> {
-                    val padding = resources.getDimensionPixelSize(R.dimen.default_padding_circle_shape)
+                    val padding = if (shape.extraPadding != Config.Shape.Circle.NOT_SET) {
+                        shape.extraPadding
+                    } else {
+                        resources.getDimensionPixelSize(R.dimen.default_padding_circle_shape)
+                    }
                     val radius = if (view.height > view.width) {
                         view.height / 2 + padding
                     } else {

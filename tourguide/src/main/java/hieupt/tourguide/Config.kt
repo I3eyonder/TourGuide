@@ -88,7 +88,7 @@ class Config {
     }
 
     sealed class Shape {
-        class Circle(val holeRadius: Int = NOT_SET) : Shape() {
+        class Circle(val holeRadius: Int = NOT_SET, val extraPadding: Int = NOT_SET) : Shape() {
 
             companion object {
                 const val NOT_SET = -1
