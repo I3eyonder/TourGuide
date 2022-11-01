@@ -9,8 +9,8 @@ buildscript {
         targetSdkVersionNum = 28
         buildToolVersionNum = '28.0.3'
         gradlePluginVersion = '3.4.1'
-        version_name = '1.0.1'
-        version_code = 2
+        version_name = '2.0.0.1'
+        version_code = 3
     }
     dependencies {
         repositories {
